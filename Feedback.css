@@ -46,7 +46,7 @@ button {
 button:hover{
     background-color: #00ffff;
     color: black;
-    box-shadow: #00ffff 0px 10px 36px 0px, #00ffff 0px 0px 0px 1px;
+    box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
     border-color: transparent;
 }
 input, button{
