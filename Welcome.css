@@ -52,7 +52,7 @@ main div ul li {
 footer div button {
   display: inline-block;
   background-color: transparent;
-  padding: 20px 60px 20px 60px;
+  padding: 20px 60px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
   margin-left: 25%;

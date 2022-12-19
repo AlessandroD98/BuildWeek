@@ -64,3 +64,6 @@ input {
     color: white;
     font-size: 1em;
 }
+input:focus{
+    outline: none;
+}
