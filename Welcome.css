@@ -5,16 +5,57 @@
 
 body {
   background-image: url(./assets/bg.jpg);
+  background-size: cover;
   color: white;
 }
 header div img {
-  width: 10%;
-  height: 3%;
+  width: 15%;
+  height: 10%;
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 main div h1 {
+  font-size: 5em;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 70%;
+  margin-left: 10%;
+}
+span {
+  font-weight: bold;
+}
+main div h5 {
+  color: #c2128d;
+  font-family: "Outfit", sans-serif;
   font-size: 2em;
+  margin-left: 10%;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+main div p {
+  font-family: "Inter", sans-serif;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+
+main div ul {
+  margin-top: 3%;
+}
+main div ul li {
+  font-family: "Inter", sans-serif;
+  margin-left: 9%;
+}
+
+footer div form {
+  display: inline-block;
+  margin-left: 10%;
+}
+footer div input {
+  display: inline-block;
+}
+footer div p {
+  display: inline-block;
   font-family: "Outfit", sans-serif;
 }
