@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   font-family: "Inter", sans-serif;
+  margin: 0;
 }
 
 header img {
