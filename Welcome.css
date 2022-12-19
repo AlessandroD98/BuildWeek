@@ -71,8 +71,12 @@ button:hover {
 
 footer div p {
   margin-left: 10px;
+  margin-top: 10vh;
+  margin-bottom: 17vh;
   display: inline-block;
   font-family: "Outfit", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
 }
 .checkbox-wrap input[type="checkbox"] {
   display: none;
