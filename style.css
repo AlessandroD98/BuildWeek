@@ -26,10 +26,13 @@ main h3 {
   font-size: 20px;
 }
 button {
-  padding-right: 40px;
-  padding-left: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-right: 70px;
+  padding-left: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   color: white;
   background-color: transparent;
+  border-color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
 }
