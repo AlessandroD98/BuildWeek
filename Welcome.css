@@ -9,10 +9,11 @@ body {
   color: white;
 }
 header div img {
-  width: 15%;
+  width: 10%;
   height: 10%;
   margin-top: 2%;
   margin-left: 10%;
+  margin-bottom: 3%;
 }
 
 main div h1 {
@@ -48,14 +49,44 @@ main div ul li {
   margin-left: 9%;
 }
 
-footer div form {
+footer div button {
   display: inline-block;
-  margin-left: 10%;
+  background-color: transparent;
+  width: 15vw;
+  height: 10vh;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  margin-left: 25%;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
 }
-footer div input {
-  display: inline-block;
+button:hover {
+  box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: #00ffff;
 }
+
 footer div p {
+  margin-left: 10px;
   display: inline-block;
   font-family: "Outfit", sans-serif;
+}
+.checkbox-wrap input[type="checkbox"] {
+  display: none;
+}
+.checkbox-wrap input[type="checkbox"] + label span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 9.5%;
+  vertical-align: middle;
+  background: #0c113b;
+  cursor: pointer;
+  border: solid white 2px;
+}
+.checkbox-wrap input[type="checkbox"]:checked + label span {
+  background: #ffffff;
 }
