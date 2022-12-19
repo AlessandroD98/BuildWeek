@@ -35,14 +35,30 @@ footer p{
     margin-top: 80px;
 }
 button {
-    background-color: #00ffff;
+    background-color: transparent;
     font-size: 1.7em;
     font-weight: bolder;
     padding: 20px 60px;
-    
+    color: white;
+    border: 1px solid white;
+    margin-top: 50px;
+}
+button:hover{
+    background-color: #00ffff;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, #00ffff 0px -12px 30px, #00ffff 0px 4px 6px, #00ffff 0px 12px 13px, #00ffff 0px -3px 5px;
+    border-color: transparent;
 }
 input, button{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+input {
+    background-color: transparent;
+    padding: 5px 570px 10px 30px;
+    border: none;
+    border-bottom: 3px solid #900080;
+    color: white;
+    font-size: 1em;
 }
