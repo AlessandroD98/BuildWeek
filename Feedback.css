@@ -46,7 +46,7 @@ button {
 button:hover{
     background-color: #00ffff;
     color: black;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, #00ffff 0px -12px 30px, #00ffff 0px 4px 6px, #00ffff 0px 12px 13px, #00ffff 0px -3px 5px;
+    box-shadow: #00ffff 0px 10px 36px 0px, #00ffff 0px 0px 0px 1px;
     border-color: transparent;
 }
 input, button{
