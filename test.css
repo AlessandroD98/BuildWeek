@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap");
+/*
+font-family: "Inter", sans-serif;
+font-family: "Outfit", sans-serif;
+*/
+
+body {
+  background-image: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+header img {
+  height: 40px;
+  margin-top: 38px;
+  margin-left: 85px;
+}
+
+.question {
+  font-family: "Outfit", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+}
+
+.first-row,
+.second-row {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.button-box button {
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  font-size: 18px;
+  height: 65px;
+  max-width: 100%;
+  padding: 2px 24px;
+  text-align: center;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin: 10px;
+  transition: 0.4s;
+  background-size: 200% auto;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.button-box button:hover {
+  background-position: right center;
+  color: #fff;
+  background-image: linear-gradient(to right, #d20094 0%, #da37a9 51%, #900080 100%);
+  text-decoration: none;
+}
+
+.questions-footer {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  left: 50%;
+  bottom: 20px;
+  margin: 180px;
+  font-size: 25px;
+}
+
+.pink-text {
+  color: #d20094;
+}
+
+/* Countdown da aggiornare */
+#countdown {
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+}
+
+#countdown-number {
+  color: white;
+  display: inline-block;
+  line-height: 40px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+  stroke-dasharray: 113px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  stroke: white;
+  fill: none;
+  animation: countdown 30s linear infinite forwards;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 113px;
+  }
+}
