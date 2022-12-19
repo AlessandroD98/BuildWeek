@@ -52,13 +52,12 @@ main div ul li {
 footer div button {
   display: inline-block;
   background-color: transparent;
-  width: 15vw;
-  height: 10vh;
+  padding: 20px 60px 20px 60px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
   margin-left: 25%;
   color: white;
-  font-size: 1.3em;
+  font-size: 1.7em;
   border: 1px solid white;
   cursor: pointer;
 }
