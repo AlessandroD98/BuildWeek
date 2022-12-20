@@ -49,7 +49,7 @@ main div ul li {
   margin-left: 9%;
 }
 
-footer div button {
+.button {
   display: inline-block;
   background-color: transparent;
   padding: 20px 60px;
@@ -61,16 +61,18 @@ footer div button {
   border: 1px solid white;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
   color: black;
   font-weight: bold;
   font-size: 1.7em;
   background-color: #00ffff;
 }
-
-footer div p {
-  margin-left: 10px;
+form p{
+  display: inline-block;
+}
+footer form  {
+  margin-left: 10%;
   margin-top: 10vh;
   margin-bottom: 17vh;
   display: inline-block;
@@ -78,10 +80,10 @@ footer div p {
   font-size: 1em;
   font-weight: bold;
 }
-.checkbox-wrap input[type="checkbox"] {
+footer div form p input[type="checkbox"] {
   display: none;
 }
-.checkbox-wrap input[type="checkbox"] + label span {
+footer div form p input[type="checkbox"] + label span {
   display: inline-block;
 
   width: 15px;
@@ -92,6 +94,6 @@ footer div p {
 
   border: solid white 2px;
 }
-.checkbox-wrap input[type="checkbox"]:checked + label span {
+footer div form p input[type="checkbox"]:checked + label span {
   background: #0c113b;
 }
