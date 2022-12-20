@@ -31,7 +31,12 @@ text-align: center;
 }
 main img {
     padding-left: 15px;
+    cursor: pointer;
+    filter: brightness(0)   
 }
+.star.selected {
+    filter: none;
+  }
 footer p{
     margin-top: 80px;
 }
