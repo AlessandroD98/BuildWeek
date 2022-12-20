@@ -4,7 +4,7 @@ let countdown = 60;
 countdownNumberEl.textContent = countdown;
 
 setInterval(function () {
-  countdown = --countdown <= 0 ? 10 : countdown;
+  countdown = --countdown <= 0 ? 60 : countdown;
 
   countdownNumberEl.textContent = countdown;
-}, 6000);
+}, 1000);
