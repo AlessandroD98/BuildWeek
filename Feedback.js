@@ -18,6 +18,7 @@ const stars = document.querySelectorAll(".star");
 
 stars.forEach((star) => {
   star.addEventListener("click", (event) => {
+    //for aggiungere loop
     const selected = event.currentTarget.classList.toggle("selected");
     const index = Array.from(stars).indexOf(event.currentTarget);
 
