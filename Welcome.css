@@ -7,6 +7,7 @@ body {
   background-image: url(./bg.jpg);
   background-size: cover;
   color: white;
+  margin: 0
 }
 header div img {
   width: 10%;
@@ -55,7 +56,7 @@ main div ul li {
   padding: 20px 60px;
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  margin-left: 25%;
+  margin-left: 700px;
   color: white;
   font-size: 1.7em;
   border: 1px solid white;
@@ -80,10 +81,10 @@ footer form  {
   font-size: 1em;
   font-weight: bold;
 }
-footer div form p input[type="checkbox"] {
+/* #field_terms input[type="checkbox"] {
   display: none;
 }
-footer div form p input[type="checkbox"] + label span {
+#field_terms input[type="checkbox"] + label span {
   display: inline-block;
 
   width: 15px;
@@ -94,6 +95,18 @@ footer div form p input[type="checkbox"] + label span {
 
   border: solid white 2px;
 }
-footer div form p input[type="checkbox"]:checked + label span {
+#field_terms input[type="checkbox"]:checked + label span {
   background: #0c113b;
+} */
+
+#field_terms{
+  -webkit-appearance: none;
+  border: 2px solid white;
+  padding: 8px;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+#field_terms:active, #field_terms:checked{
+  background-color: white;
 }
