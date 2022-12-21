@@ -29,9 +29,15 @@ main {
 box-sizing: border-box;
 text-align: center;
 }
-main img {
+.star {
     padding-left: 15px;
+    cursor: pointer;
+    filter: brightness(0)   
 }
+.selected {
+    filter: none;
+    padding-left: 15px;
+  }
 footer p{
     margin-top: 80px;
 }
