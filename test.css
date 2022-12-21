@@ -20,7 +20,8 @@ header img {
   margin-left: 85px;
 }
 
-.question {
+#question,
+.title {
   font-family: "Outfit", sans-serif;
   color: white;
   text-align: center;

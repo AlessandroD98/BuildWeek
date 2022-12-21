@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./test.css">
 </head>
 
-<body>
+<body onload=x()>
     <header>
         <img src="./epicode_logo.png" alt="Logo" class="logo">
     </header>
@@ -19,20 +19,20 @@
             <circle r="18" cx="20" cy="20"></circle>
         </svg>
     </div>
-    <div class="question">
-        <p>How can I create a <br>
+    <div id="currentQuestion">
+        <!-- <p>How can I create a <br>
             <b>checkbox in HTML?</b>
-        </p>
+        </p> -->
 
     </div>
     <div class="button-box">
         <div class="first-row">
-            <button>&#60;input type = "check"&#62;</button>
-            <button>&#60;input type = "checkbox"&#62;</button>
+            <button id="buttOne"></button>
+            <button id="buttTwo"></button>
         </div>
         <div class="second-row">
-            <button>&#60;checkbox&#62;</button>
-            <button>&#60;input type = "button"&#62;</button>
+            <button id="buttThree"></button>
+            <button id="buttFour"></button>
         </div>
     </div>
     <div class="questions-footer">
