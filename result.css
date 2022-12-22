@@ -9,7 +9,7 @@ body {
 
 header img {
   text-align: left;
-  width: 15%;
+  width: 20%;
   padding: 60px;
 }
 main {
@@ -25,14 +25,89 @@ main h3 {
   margin: 0;
   font-size: 20px;
 }
-.correct {
-  text-align: left;
-  margin-left: 150px;
-  font-size: 25px;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-.chartcontainer {
-  height: 300px;
+
+.donut-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+  border-radius: 100%;
+  margin-top: 40px;
+}
+p.center {
+  background: #394264;
+  position: absolute;
+  text-align: center;
+  font-size: 28px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  border-radius: 50%;
+  line-height: 35px;
+  padding: 15% 0 0;
+}
+
+.portion-block {
+  border-radius: 50%;
+  clip: rect(0px, 200px, 200px, 100px);
+  height: 100%;
+  position: absolute;
   width: 100%;
+}
+.circle {
+  border-radius: 50%;
+  clip: rect(0px, 100px, 200px, 0px);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+#part1 {
+  transform: rotate(0deg);
+}
+
+#part1 .circle {
+  background-color: #e64c65;
+  /*transform: rotate(76deg);*/
+  animation: first 1s 1 forwards;
+}
+
+#part2 {
+  transform: rotate(0deg);
+}
+#part2 .circle {
+  background-color: #11a8ab;
+  animation: second 1s 1 forwards 1s;
+}
+
+/* Animation */
+@keyframes first {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
+}
+
+@keyframes second {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(150deg);
+  }
 }
 footer {
   text-align: center;
@@ -48,5 +123,13 @@ button {
   font-family: "Outfit", sans-serif;
   font-size: 25px;
   font-weight: 500;
-  margin-top: 20px;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ffff;
+  color: black;
+  box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
+  border-color: transparent;
 }

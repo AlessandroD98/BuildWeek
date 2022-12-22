@@ -14,12 +14,21 @@
     <main>
       <h1>Results</h1>
       <h3>The summary of your answers:</h3>
-      <div id="chartContainer"></div>
+      <div class="container">
+        <div class="donut-chart-block block">
+          <div class="donut-chart">
+            <div id="part1" class="portion-block"><div class="circle"></div></div>
+            <div id="part2" class="portion-block"><div class="circle"></div></div>
+            <div id="part3" class="portion-block"><div class="circle"></div></div>
+            <p class="center"></p>
+          </div>
+        </div>
+      </div>
       <footer>
         <button type="button">Rate Us</button>
       </footer>
     </main>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
     <script src="./result.js"></script>
   </body>
 </html>
