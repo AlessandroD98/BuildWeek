@@ -1,16 +1,3 @@
-let countdownNumberEl = document.getElementById("countdown-number");
-let countdown = 60;
-
-countdownNumberEl.textContent = countdown;
-
-setInterval(function () {
-  countdown = --countdown <= 0 ? 60 : countdown;
-
-  countdownNumberEl.textContent = countdown;
-}, 1000);
-
-// Parte per la pagina 2
-
 const questions = [
   {
     category: "Science: Computers",
@@ -94,64 +81,8 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
-// window.onload
-// for (let i = 0; i < questions[i].question.length; i++) {
-//   let element = questions[i].question;
-//   console.log(element);
-// }
-
-let x = function () {
-  const posizioneDomanda = document.getElementById("currentQuestion");
-  const scatolaDomanda = document.createElement("p");
-  scatolaDomanda.className = "title";
-  const firstQuestion = questions[0].question;
-  scatolaDomanda.innerText = firstQuestion;
-  posizioneDomanda.appendChild(scatolaDomanda);
-  //Pulsante Uno
-  const answerOne = questions[0].correct_answer;
-  const scatolaRisposta = document.getElementById("buttOne");
-  const screenRis = document.createElement("p");
-  screenRis.className = "buttonP";
-  screenRis.innerText = answerOne;
-  scatolaRisposta.appendChild(screenRis);
-  //Pulsante Due
-  const answerTwo = questions[0].incorrect_answers[0];
-  const scatolaRispostaDue = document.getElementById("buttTwo");
-  const screenRisUno = document.createElement("p");
-  screenRisUno.className = "buttonP";
-  screenRisUno.innerText = answerTwo;
-  scatolaRispostaDue.appendChild(screenRisUno);
-  //Pulsante Tre
-  const answerThree = questions[0].incorrect_answers[1];
-  const scatolaRispostaTre = document.getElementById("buttThree");
-  const screenRisDue = document.createElement("p");
-  screenRisDue.className = "buttonP";
-  screenRisDue.innerText = answerThree;
-  scatolaRispostaTre.appendChild(screenRisDue);
-  //Pulsante Quattro
-  const answerFour = questions[0].incorrect_answers[2];
-  const scatolaRispostaQuattro = document.getElementById("buttFour");
-  const screenRisTre = document.createElement("p");
-  screenRisTre.className = "buttonP";
-  screenRisTre.innerText = answerFour;
-  scatolaRispostaQuattro.appendChild(screenRisTre);
-};
-
-// const bottoni = document.querySelectorAll("button");
-// bottoni.forEach((bottone) => {
-//   bottone.addEventListener("click", check, replace);
-// });
-
-// const check = function () {
-//   if (questions[0].correct_answer)
-// }
 
 // TIPS:
-//
-// SE MOSTRI UNA DOMANDA ALLA VOLTA:
-// Mostra la prima domanda con il testo e i radio button.
-// Quando l'utente seleziona una risposta, passa alla domanda successiva dell'array e sostituisci quella precedentemente visualizzata con quella corrente,
-// salvando le risposte dell'utente in una variabile
 
 // Come calcolare il risultato? Hai due strade:
 // Se stai mostrando tutte le domande nello stesso momento, controlla semplicemente se i radio button selezionati sono === correct_answer
@@ -186,3 +117,88 @@ let x = function () {
 // /* NON DIMENTICARE...
 //   di fare commit & push del codice regolarmente sulla tua repository GitHub e di condividerla con i tuoi colleghi
 // */
+let countdownNumberEl = document.getElementById("countdown-number");
+let countdown = 60;
+
+countdownNumberEl.textContent = countdown;
+
+const resetTimer = () => {
+  countdown = 60;
+  countdownNumberEl.textContent = countdown;
+};
+
+setInterval(function () {
+  countdown = --countdown <= 0 ? 60 : countdown;
+
+  countdownNumberEl.textContent = countdown;
+}, 1000);
+
+let x = function () {
+  let currentQuestion = 0;
+  let correctAnswers = 0;
+  let incorrectAnswers = 0;
+
+  const showQuestion = () => {
+    updateQuestionCounter(); // Aggiorna il counter in basso
+    resetTimer(); //Resetta il timer a 60
+    // Mostra la domanda corrente
+    document.querySelector("#currentQuestion").innerHTML = `
+    <p>${questions[currentQuestion].question}</p>
+  `;
+
+    // Mostra le risposte
+    const buttons = document.querySelectorAll(".button-box button");
+    buttons.forEach((button, index) => {
+      button.innerHTML =
+        questions[currentQuestion].incorrect_answers[index] || questions[currentQuestion].correct_answer;
+    });
+
+    // Se ci sono solo due risposte, mostra solo i primi due pulsanti
+    // altrimenti, mostra tutti e quattro i pulsanti
+    if (questions[currentQuestion].incorrect_answers.length + 1 === 2) {
+      document.querySelector("#buttThree").style.display = "none";
+      document.querySelector("#buttFour").style.display = "none";
+    } else {
+      document.querySelector("#buttThree").style.display = "inline-block";
+      document.querySelector("#buttFour").style.display = "inline-block";
+    }
+  };
+
+  document.querySelectorAll(".button-box button").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      // Verifica se la risposta è corretta
+      const isCorrect = event.target.innerHTML === questions[currentQuestion].correct_answer;
+      if (isCorrect) {
+        // Incrementa il contatore delle risposte corrette
+        correctAnswers++;
+      } else {
+        // Incrementa il contatore delle risposte sbagliate
+        incorrectAnswers++;
+      }
+
+      // Passa alla domanda successiva
+      currentQuestion++;
+      if (currentQuestion === questions.length) {
+        // Fine del quiz, mostra un messaggio
+        document.querySelector("#currentQuestion").innerHTML = `<button id="buttEnd">Vai ai risultati!</button>`;
+        document.querySelector(".button-box").innerHTML = "";
+        const timer = document.getElementById("countdown");
+        timer.remove();
+        const footerNone = document.querySelector(".questions-footer");
+        footerNone.remove();
+      } else {
+        // Mostra la domanda successiva
+        showQuestion();
+      }
+    });
+  });
+  const updateQuestionCounter = () => {
+    // Aggiorna il contatore delle domande
+    document.querySelector(".questions-footer p").innerHTML = `Question ${
+      currentQuestion + 1
+    }<span class="pink-text">/10</span>`;
+  };
+
+  // Mostra la prima domanda
+  showQuestion();
+};
