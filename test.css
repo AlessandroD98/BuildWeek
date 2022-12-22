@@ -59,24 +59,14 @@ header img {
 .button-box button:hover {
   background-position: right center;
   color: #fff;
-  background-image: linear-gradient(
-    to right,
-    #d20094 0%,
-    #da37a9 51%,
-    #900080 100%
-  );
+  background-image: linear-gradient(to right, #d20094 0%, #da37a9 51%, #900080 100%);
   text-decoration: none;
 }
 
 .button-box button:focus {
   background-position: right center;
   color: #fff;
-  background-image: linear-gradient(
-    to right,
-    #1d817c 0%,
-    #48a4bb 51%,
-    #4d89d8 100%
-  );
+  background-image: linear-gradient(to right, #1d817c 0%, #48a4bb 51%, #4d89d8 100%);
   text-decoration: none;
 }
 

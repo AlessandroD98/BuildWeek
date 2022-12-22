@@ -186,6 +186,12 @@ let x = function () {
         timer.remove();
         const footerNone = document.querySelector(".questions-footer");
         footerNone.remove();
+        // Aggiungi un evento di click al bottone "buttEnd"
+        const buttEnd = document.getElementById("buttEnd");
+        buttEnd.addEventListener("click", () => {
+          // Carica la nuova pagina web con i valori di correctAnswers e incorrectAnswers come parametri dell'URL
+          window.location.assign(`/results.html?correctAnswers=${correctAnswers}&incorrectAnswers=${incorrectAnswers}`);
+        });
       } else {
         // Mostra la domanda successiva
         showQuestion();
@@ -202,3 +208,11 @@ let x = function () {
   // Mostra la prima domanda
   showQuestion();
 };
+
+// const bottoneFinale = document.getElementById("buttEnd");
+
+// // Aggiungi un evento di click al bottone
+// bottoneFinale.addEventListener("click", () => {
+//   // Carica la nuova pagina web
+//   window.location.assign(`/results.html?giuste=${correctAnswers}&max=10`);
+// });
