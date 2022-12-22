@@ -56,3 +56,10 @@ footer {
   margin-right: auto;
   margin-top: 50px;
 }
+#contdomande {
+  display: inline-block
+}
+#rispcorr, #risperr{
+  height: 80%;
+}
+

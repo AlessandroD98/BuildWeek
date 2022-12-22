@@ -29,5 +29,39 @@ const myChart = new Chart(ctx, {
   },
 });
 const canvas = document.getElementById("myChart");
-canvas.style.width = "350px";
-canvas.style.height = "350px";
+canvas.style.width = "80%";
+canvas.style.height = "80%";
+
+const latosx = function () {
+  const newprimoparametro = (primoParametro / 10) * 100;
+  const rispotecorr = document.getElementById("rispcorr");
+  const pcorr = document.createElement("p");
+  pcorr.innerText = "Correct";
+  const p2corr = document.createElement("p");
+  p2corr.innerText = newprimoparametro + "%";
+  const p3corr = document.createElement("p");
+  p3corr.innerText = primoParametro + "/10 questions";
+  pcorr.classList = "correct";
+  p2corr.classList = "correct";
+  p3corr.classList = "correct";
+  rispotecorr.appendChild(pcorr);
+  rispotecorr.appendChild(p2corr);
+  rispotecorr.appendChild(p3corr);
+};
+
+const latodx = function () {
+  const newsecondoparametro = (secondoParametro / 10) * 100;
+  const rispoteerr = document.getElementById("risperr");
+  const perr = document.createElement("p");
+  perr.innerText = "Wrong";
+  const p2err = document.createElement("p");
+  p2err.innerText = newsecondoparametro + "%";
+  const p3err = document.createElement("p");
+  p3err.innerText = secondoParametro + "/10 questions";
+  perr.classList = "wrong";
+  p2err.classList = "wrong";
+  p3err.classList = "wrong";
+  rispoteerr.appendChild(perr);
+  rispoteerr.appendChild(p2err);
+  rispoteerr.appendChild(p3err);
+};
