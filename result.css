@@ -26,15 +26,28 @@ main h3 {
   font-size: 20px;
 }
 button {
-  padding-right: 70px;
-  padding-left: 70px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   color: white;
   background-color: transparent;
   border-color: white;
   font-family: "Outfit", sans-serif;
   font-size: 25px;
+  font-weight: 500;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ffff;
+  color: black;
+  box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
+  border-color: transparent;
+}
+
+footer {
   text-align: center;
 }
 
