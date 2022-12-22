@@ -37,7 +37,7 @@ main h3 {
   height: 200px;
   margin: 0 auto 2rem;
   border-radius: 100%;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 p.center {
   background: #394264;
@@ -84,11 +84,18 @@ p.center {
 }
 
 #part2 {
-  transform: rotate(0deg);
+  transform: rotate(100deg);
 }
 #part2 .circle {
   background-color: #11a8ab;
   animation: second 1s 1 forwards 1s;
+}
+#part3 {
+  transform: rotate(250deg);
+}
+#part3 .circle {
+  background-color: #4fc4f6;
+  animation: third 0.5s 1 forwards 2s;
 }
 
 /* Animation */
@@ -109,6 +116,16 @@ p.center {
     transform: rotate(150deg);
   }
 }
+
+@keyframes third {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(111deg);
+  }
+}
+
 footer {
   text-align: center;
 }
