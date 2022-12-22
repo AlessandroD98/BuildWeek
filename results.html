@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./result.css" />
     <title>Results-page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
     <header>
@@ -14,21 +15,11 @@
     <main>
       <h1>Results</h1>
       <h3>The summary of your answers:</h3>
-      <div class="container">
-        <div class="donut-chart-block block">
-          <div class="donut-chart">
-            <div id="part1" class="portion-block"><div class="circle"></div></div>
-            <div id="part2" class="portion-block"><div class="circle"></div></div>
-            <div id="part3" class="portion-block"><div class="circle"></div></div>
-            <p class="center"></p>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <button type="button">Rate Us</button>
-      </footer>
+      <canvas id="myChart"></canvas>
     </main>
-
+    <footer>
+      <button type="button">RATE US</button>
+    </footer>
     <script src="./result.js"></script>
   </body>
 </html>
