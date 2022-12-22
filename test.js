@@ -190,7 +190,9 @@ let x = function () {
         const buttEnd = document.getElementById("buttEnd");
         buttEnd.addEventListener("click", () => {
           // Carica la nuova pagina web con i valori di correctAnswers e incorrectAnswers come parametri dell'URL
-          window.location.assign(`/results.html?correctAnswers=${correctAnswers}&incorrectAnswers=${incorrectAnswers}`);
+          window.location.assign(
+            `/results.html?correctAnswers=${correctAnswers}&incorrectAnswers=${incorrectAnswers}&max=10`
+          );
         });
       } else {
         // Mostra la domanda successiva
