@@ -14,16 +14,22 @@ header img {
 }
 main {
   text-align: center;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
 }
-main h1 {
+h1 {
   font-size: 50px;
   margin: 0;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
 }
-main h3 {
+p {
   margin: 0;
   font-size: 20px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: lighter;
 }
 button {
   padding-right: 80px;
@@ -51,15 +57,14 @@ footer {
   text-align: center;
 }
 
-#myChart {
+/* #myChart {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-}
+  margin-top: 30px;
+} */
 #contdomande {
-  display: inline-block
+  display: inline-block;
+  height: 500px;
+  padding-left: 150px;
+  margin-top: 30px;
 }
-#rispcorr, #risperr{
-  height: 80%;
-}
-
