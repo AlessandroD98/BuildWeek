@@ -53,7 +53,7 @@ button {
 }
 button:hover{
     background-color: #00ffff;
-    color: black;
+    color: rgb(11, 17, 59);
     box-shadow: #00ffff 0px 0px 30px 0px, #00ffff 0px 0px 0px 1px;
     border-color: transparent;
 }
