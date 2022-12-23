@@ -8,7 +8,7 @@ const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
   type: "doughnut",
   data: {
-    labels: ["Risposte giuste", "Risposte sbagliate"],
+    labels: ["Correct Answers", "Wrong Answers"],
     datasets: [
       {
         label: "# of Votes",
@@ -20,6 +20,17 @@ const myChart = new Chart(ctx, {
     ],
   },
   options: {
+    cutoutPercentage: 50,
+    afterDraw: function (chart) {
+      if (primoParametro > 5) {
+        const ctx = chart.chart.ctx;
+        ctx.fillStyle = "black";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.font = "20px Arial";
+        ctx.fillText("Congratulations", chart.chart.width / 2, chart.chart.height / 2);
+      }
+    },
     responsive: true,
     maintainAspectRatio: false,
     legend: {
@@ -27,6 +38,8 @@ const myChart = new Chart(ctx, {
       position: "right",
       labels: {
         boxWidth: 20,
+        fontColor: "#ffffff",
+        fontSize: 20,
         generateLabels: function (chart) {
           const data = chart.data;
           if (data.labels.length && data.datasets.length) {

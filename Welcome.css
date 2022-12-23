@@ -7,7 +7,7 @@ body {
   background-image: url(./bg.jpg);
   background-size: cover;
   color: white;
-  margin: 0
+  margin: 0;
 }
 header div img {
   width: 15%;
@@ -33,13 +33,12 @@ main div h5 {
   font-size: 2em;
   margin-left: 10%;
   margin-bottom: 0;
-  font-size: 1.5em;
 }
 
-main div p {
+.firstP {
   font-family: "Inter", sans-serif;
-  margin-left: 10%;
-  margin-top: 1%;
+  padding-left: 10%;
+  margin-top: 4px;
 }
 
 main div ul {
@@ -48,6 +47,7 @@ main div ul {
 main div ul li {
   font-family: "Inter", sans-serif;
   margin-left: 9%;
+  line-height: 25px;
 }
 
 .button {
@@ -73,10 +73,10 @@ form {
   font-size: 1.7em;
   background-color: #00ffff;
 }
-form p{
+form p {
   display: inline-block;
 }
-footer form  {
+footer form {
   margin-left: 10%;
   margin-top: 10vh;
   margin-bottom: 17vh;
@@ -103,7 +103,7 @@ footer form  {
   background: #0c113b;
 } */
 
-#field_terms{
+#field_terms {
   -webkit-appearance: none;
   border: 2px solid white;
   padding: 8px;
@@ -111,6 +111,11 @@ footer form  {
   vertical-align: middle;
   margin-right: 15px;
 }
-#field_terms:active, #field_terms:checked{
+#field_terms:active,
+#field_terms:checked {
   background-color: white;
+}
+
+label {
+  font-weight: 500;
 }

@@ -54,6 +54,7 @@ header img {
   font-weight: 500;
   border-radius: 50px;
   border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgb(204 219 232) 3px 3px 0px 0px inset, rgb(255 255 255 / 50%) 0px 2px 0px 0px inset;
 }
 
 .button-box button:hover {
@@ -63,12 +64,12 @@ header img {
   text-decoration: none;
 }
 
-.button-box button:focus {
+/* .button-box button:focus {
   background-position: right center;
   color: #fff;
   background-image: linear-gradient(to right, #1d817c 0%, #48a4bb 51%, #4d89d8 100%);
   text-decoration: none;
-}
+} */
 
 .questions-footer {
   text-transform: uppercase;
@@ -99,13 +100,10 @@ header img {
   color: white;
   display: inline-block;
   line-height: 40px;
+  font-size: 20px;
   font-family: "Outfit", sans-serif;
 }
 
-div#countdown {
-  display: inline-block;
-  margin-left: 90%;
-}
 svg {
   position: absolute;
   top: 0;
