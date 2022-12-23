@@ -5,12 +5,13 @@ font-family: 'Outfit', sans-serif; */
 body {
   background-image: url(./bg.jpg);
   background-size: cover;
+  margin: 0;
 }
 
 header img {
-  text-align: left;
-  width: 15%;
-  padding: 60px;
+  height: 60px;
+  margin-top: 38px;
+  margin-left: 85px;
 }
 main {
   text-align: center;
